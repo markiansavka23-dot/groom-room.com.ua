@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="5np1Hq5f4iqMR9xv5W1smd18gLvHFhE7KK4NDoZ5WcI">
+
+
+<title>Groom Room — грумінг у Львові</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --cream:#f7f3ed;
+    --white:#fff;
+    --dark:#20201e;
+    --accent:#c98d69;
+    --accent-dark:#a96d4d;
+    --green:#788b70;
+    --muted:#77716b;
+    --border:#ddd4ca;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family:"Manrope",sans-serif;
+    color:var(--dark);
+    background:var(--cream);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+img {
+    display:block;
+    max-width:100%;
+}
+
+.container {
+    width:min(1160px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(247,243,237,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(32,32,30,.08);
+    transition:.35s;
+}
+
+.header.scrolled {
+    box-shadow:0 10px 35px rgba(32,32,30,.1);
+}
+
+.nav {
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+/* ЛОГО */
+
+.logo {
+    width:75px;
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo img {
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    border-radius:50%;
+    transition:.35s;
+}
+
+.logo:hover img {
+    transform:rotate(-5deg) scale(1.07);
+}
+
+.menu {
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.menu a {
+    position:relative;
+    font-size:14px;
+    font-weight:800;
+}
+
+.menu a::after {
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--accent);
+    transition:.3s;
+}
+
+.menu a:hover::after {
+    width:100%;
+}
+
+.menu a:hover {
+    color:var(--accent-dark);
+}
+
+.header-phone {
+    background:var(--dark);
+    color:white;
+    padding:13px 20px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.header-phone:hover {
+    background:var(--accent-dark);
+    transform:translateY(-2px);
+}
+
+.mobile-menu {
+    display:none;
+    border:0;
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    background:var(--dark);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position:relative;
+    overflow:hidden;
+    padding:160px 0 100px;
+}
+
+.hero::before {
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(201,141,105,.13);
+    top:-200px;
+    right:-150px;
+}
+
+.hero-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.hero-content {
+    animation:fadeUp .8s ease both;
+}
+
+.badge {
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    background:#e9e0d5;
+    padding:9px 15px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:23px;
+}
+
+.badge:before {
+    content:"";
+    width:8px;
+    height:8px;
+    background:var(--green);
+    border-radius:50%;
+}
+
+.hero h1 {
+    font-family:"Playfair Display",serif;
+    font-size:clamp(50px,6vw,80px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero h1 span {
+    color:var(--accent);
+}
+
+.hero-text {
+    max-width:560px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:32px;
+}
+
+.buttons {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn {
+    position:relative;
+    overflow:hidden;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px 25px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:800;
+    transition:.25s;
+    border:0;
+    cursor:pointer;
+}
+
+.btn::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,.15);
+    transform:translateX(-110%);
+    transition:.4s;
+}
+
+.btn:hover::before {
+    transform:translateX(110%);
+}
+
+.btn-primary {
+    background:var(--dark);
+    color:white;
+}
+
+.btn-primary:hover {
+    background:var(--accent-dark);
+    transform:translateY(-3px);
+}
+
+.btn-secondary {
+    background:white;
+    border:1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    transform:translateY(-3px);
+    border-color:var(--accent);
+}
+
+.hero-image {
+    position:relative;
+    animation:fadeUp .8s .15s ease both;
+}
+
+.hero-image > img {
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    border-radius:42% 42% 24px 24px;
+    box-shadow:0 25px 70px rgba(0,0,0,.15);
+    transition:.7s;
+}
+
+.hero-image:hover > img {
+    transform:scale(1.015);
+    box-shadow:0 35px 90px rgba(0,0,0,.2);
+}
+
+.hero-card {
+    position:absolute;
+    left:-35px;
+    bottom:35px;
+    background:white;
+    padding:18px 22px;
+    border-radius:20px;
+    box-shadow:0 15px 45px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.hero-image:hover .hero-card {
+    transform:translateY(-8px);
+}
+
+.hero-card strong {
+    display:block;
+    font-size:23px;
+}
+
+.hero-card span {
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* ================= GENERAL ================= */
+
+section {
+    padding:100px 0;
+}
+
+.section-label {
+    color:var(--accent-dark);
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.section-title {
+    font-family:"Playfair Display",serif;
+    font-size:48px;
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.section-description {
+    max-width:650px;
+    color:var(--muted);
+}
+
+.section-heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:40px;
+    margin-bottom:45px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    background:white;
+}
+
+.services-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service-card {
+    position:relative;
+    overflow:hidden;
+    background:var(--cream);
+    padding:30px;
+    min-height:245px;
+    border-radius:24px;
+    transition:.3s;
+}
+
+.service-card:hover {
+    transform:translateY(-7px);
+    box-shadow:0 20px 45px rgba(0,0,0,.09);
+}
+
+.service-card::after {
+    content:"🐾";
+    position:absolute;
+    right:-10px;
+    bottom:-25px;
+    font-size:95px;
+    opacity:.05;
+    transition:.4s;
+}
+
+.service-card:hover::after {
+    transform:rotate(-10deg) scale(1.1);
+    opacity:.11;
+}
+
+.service-number {
+    display:block;
+    color:var(--accent);
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:45px;
+}
+
+.service-card h3 {
+    font-family:"Playfair Display",serif;
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.service-card p {
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image {
+    position:relative;
+}
+
+.about-image img {
+    width:100%;
+    height:570px;
+    object-fit:cover;
+    border-radius:28px;
+    box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.about-image::after {
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    border:1px solid rgba(201,141,105,.5);
+    border-radius:50%;
+    right:-25px;
+    bottom:-25px;
+    z-index:-1;
+}
+
+.advantages {
+    display:grid;
+    gap:8px;
+    margin:30px 0;
+}
+
+.advantage {
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:12px 14px;
+    border-radius:15px;
+    transition:.25s;
+}
+
+.advantage:hover {
+    background:white;
+    transform:translateX(6px);
+}
+
+.advantage span {
+    width:28px;
+    height:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e3e9de;
+    color:var(--green);
+    border-radius:50%;
+    font-weight:800;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    background:#22221f;
+    color:white;
+}
+
+.gallery .section-label {
+    color:#d9a583;
+}
+
+.gallery .section-description {
+    color:#aaa69f;
+}
+
+.gallery-grid {
+    margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:14px;
+}
+
+.gallery-item {
+    position:relative;
+    grid-column:span 4;
+    height:280px;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.gallery-item.large {
+    grid-column:span 5;
+}
+
+.gallery-item img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img {
+    transform:scale(1.07);
+}
+
+.gallery-item::after {
+    content:"🐾";
+    position:absolute;
+    right:18px;
+    bottom:14px;
+    font-size:22px;
+    opacity:0;
+    transition:.3s;
+}
+
+.gallery-item:hover::after {
+    opacity:.8;
+}
+
+/* ================= DOG STRIP ================= */
+
+.dog-strip {
+    position:relative;
+    background:white;
+    overflow:hidden;
+}
+
+.dog-strip-heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:40px;
+    margin-bottom:40px;
+}
+
+.dog-strip-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.dog-strip-grid img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:24px;
+    transition:.45s;
+}
+
+.dog-strip-grid img:hover {
+    transform:translateY(-8px) scale(1.025);
+    box-shadow:0 25px 50px rgba(32,32,30,.16);
+}
+
+/* ================= BOOKING ================= */
+
+.booking {
+    background:var(--cream);
+}
+
+.booking-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.booking-phone {
+    margin-top:30px;
+    background:white;
+    padding:20px;
+    border-radius:18px;
+}
+
+.booking-phone small {
+    display:block;
+    color:var(--muted);
+}
+
+.booking-phone a {
+    color:var(--accent-dark);
+    font-size:21px;
+    font-weight:800;
+}
+
+.booking-form {
+    background:white;
+    padding:35px;
+    border-radius:28px;
+    box-shadow:0 15px 45px rgba(0,0,0,.07);
+    transition:.35s;
+}
+
+.booking-form:focus-within {
+    transform:translateY(-5px);
+    box-shadow:0 25px 60px rgba(32,32,30,.12);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width:100%;
+    border:1px solid var(--border);
+    background:#faf8f5;
+    padding:15px 17px;
+    border-radius:14px;
+    margin-bottom:14px;
+    font-family:inherit;
+    font-size:14px;
+    outline:none;
+    transition:.25s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color:var(--accent);
+    background:white;
+}
+
+.booking-form textarea {
+    resize:vertical;
+}
+
+.booking-form button {
+    width:100%;
+}
+
+.booking-success {
+    display:none;
+    margin-top:18px;
+    padding:18px;
+    background:#e5eee1;
+    color:#53644d;
+    border-radius:14px;
+    font-size:14px;
+}
+
+.booking-success a {
+    font-weight:800;
+}
+
+/* ================= CONTACTS ================= */
+
+.contacts {
+    background:#e8e0d5;
+}
+
+.contact-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-box {
+    background:white;
+    border-radius:28px;
+    padding:40px;
+    transition:.35s;
+}
+
+.contact-box:hover {
+    transform:translateY(-5px);
+}
+
+.contact-list {
+    display:grid;
+    gap:24px;
+    margin-top:35px;
+}
+
+.contact-row {
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+}
+
+.contact-icon {
+    width:44px;
+    height:44px;
+    flex:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eee7de;
+    border-radius:50%;
+}
+
+.contact-row small {
+    display:block;
+    color:var(--muted);
+}
+
+.contact-row a {
+    font-weight:700;
+}
+
+.instagram-button {
+    display:inline-flex;
+    margin-top:30px;
+    padding:13px 20px;
+    border-radius:50px;
+    background:var(--dark);
+    color:white;
+    font-size:14px;
+    font-weight:800;
+    transition:.3s;
+}
+
+.instagram-button:hover {
+    background:var(--accent-dark);
+    transform:translateY(-3px);
+}
+
+.map {
+    overflow:hidden;
+    min-height:100%;
+    border-radius:28px;
+    transition:.35s;
+}
+
+.map:hover {
+    transform:translateY(-5px);
+}
+
+.map iframe {
+    display:block;
+    width:100%;
+    height:100%;
+    min-height:480px;
+    border:0;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    position:relative;
+    overflow:hidden;
+    padding:80px 0;
+    background:var(--accent);
+    color:white;
+}
+
+.cta::after {
+    content:"🐾";
+    position:absolute;
+    right:6%;
+    bottom:-75px;
+    font-size:220px;
+    opacity:.08;
+}
+
+.cta-inner {
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.cta h2 {
+    font-family:"Playfair Display",serif;
+    font-size:48px;
+    line-height:1.1;
+}
+
+.cta p {
+    margin-top:10px;
+}
+
+.btn-light {
+    background:white;
+    color:var(--dark);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background:var(--dark);
+    color:white;
+    padding:45px 0;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.footer-logo img {
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    border-radius:50%;
+    transition:.35s;
+    margin-bottom:10px;
+}
+
+.footer-logo img:hover {
+    transform:rotate(5deg) scale(1.06);
+}
+
+.footer-logo p {
+    color:#777;
+    font-size:12px;
+}
+
+.footer-links {
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    color:#aaa;
+    font-size:13px;
+}
+
+.footer-links a:hover {
+    color:white;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity:0;
+        transform:translateY(28px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.reveal {
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px) {
+
+    .nav {
+        height:70px;
+    }
+
+    .menu {
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        padding:25px;
+        background:var(--cream);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+        box-shadow:0 20px 35px rgba(32,32,30,.08);
+    }
+
+    .menu.mobile-open {
+        display:flex;
+    }
+
+    .header-phone {
+        display:none;
+    }
+
+    .mobile-menu {
+        display:block;
+    }
+
+    .hero {
+        padding:125px 0 70px;
+    }
+
+    .hero-grid {
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .hero h1 {
+        font-size:54px;
+    }
+
+    .hero-image img {
+        height:500px;
+    }
+
+    .hero-card {
+        left:15px;
+    }
+
+    section {
+        padding:75px 0;
+    }
+
+    .section-title {
+        font-size:40px;
+    }
+
+    .section-heading,
+    .dog-strip-heading {
+        display:block;
+    }
+
+    .section-heading .section-description,
+    .dog-strip-heading .section-description {
+        margin-top:20px;
+    }
+
+    .services-grid {
+        grid-template-columns:1fr;
+    }
+
+    .about-grid {
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-image img {
+        height:450px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-item,
+    .gallery-item.large {
+        grid-column:span 1;
+    }
+
+    .dog-strip-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .booking-grid {
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .contact-grid {
+        grid-template-columns:1fr;
+    }
+
+    .map iframe {
+        min-height:350px;
+    }
+
+    .cta-inner {
+        display:block;
+    }
+
+    .cta h2 {
+        font-size:40px;
+        margin-bottom:25px;
+    }
+
+    .footer-inner {
+        display:block;
+    }
+
+    .footer-links {
+        margin-top:25px;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .logo {
+        width:60px;
+        height:60px;
+    }
+
+    .logo img {
+        width:55px;
+        height:55px;
+    }
+
+    .hero h1 {
+        font-size:44px;
+    }
+
+    .hero-image img {
+        height:400px;
+    }
+
+    .gallery-grid {
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item,
+    .gallery-item.large {
+        grid-column:span 1;
+        height:300px;
+    }
+
+    .dog-strip-grid {
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .dog-strip-grid img {
+        height:180px;
+        border-radius:18px;
+    }
+
+    .booking-form {
+        padding:25px;
+    }
+
+    .contact-box {
+        padding:27px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="Groom Room">
+        </a>
+
+        <nav class="menu">
+
+            <a href="#services">Послуги</a>
+
+            <a href="#about">Про нас</a>
+
+            <a href="#gallery">Наші роботи</a>
+
+            <a href="#booking">Запис</a>
+
+            <a href="#contacts">Контакти</a>
+
+        </nav>
+
+        <a
+            href="tel:+380677230001"
+            class="header-phone"
+        >
+            +380 67 723 00 01
+        </a>
+
+        <button
+            class="mobile-menu"
+            onclick="toggleMenu()"
+            aria-label="Відкрити меню"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                Професійний грумінг у Львові
+            </div>
+
+            <h1>
+                Краса,<br>
+                комфорт і <span>турбота</span><br>
+                про вашого улюбленця.
+            </h1>
+
+            <p class="hero-text">
+                Groom Room — затишний простір для собак і котів,
+                де кожен улюбленець отримує професійний догляд
+                та індивідуальну увагу.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="#booking"
+                    class="btn btn-primary"
+                >
+                    Записатися
+                </a>
+
+                <a
+                    href="#services"
+                    class="btn btn-secondary"
+                >
+                    Переглянути послуги
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1400&q=85"
+                alt="Собака Groom Room"
+            >
+
+            <div class="hero-card">
+
+                <strong>
+                    Groom Room
+                </strong>
+
+                <span>
+                    Львів · вул. Лісна, 50А<br>
+                    ★ Турбота про кожного хвостика
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section
+    class="services reveal"
+    id="services"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Наші послуги
+                </div>
+
+                <h2 class="section-title">
+                    Догляд, якого<br>
+                    вони заслуговують
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Підбираємо процедури відповідно до породи,
+                шерсті та індивідуальних потреб вашого улюбленця.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <article class="service-card">
+
+                <span class="service-number">
+                    01
+                </span>
+
+                <h3>
+                    Комплексний грумінг
+                </h3>
+
+                <p>
+                    Повний комплекс процедур для охайного
+                    та красивого вигляду вашого улюбленця.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">
+                    02
+                </span>
+
+                <h3>
+                    Стрижка
+                </h3>
+
+                <p>
+                    Акуратна стрижка відповідно до породи
+                    та ваших побажань.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">
+                    03
+                </span>
+
+                <h3>
+                    Купання
+                </h3>
+
+                <p>
+                    Дбайливе купання та сушка
+                    з використанням професійної косметики.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">
+                    04
+                </span>
+
+                <h3>
+                    Гігієнічний догляд
+                </h3>
+
+                <p>
+                    Кігті, вуха, лапки та інші процедури
+                    для здоров'я і комфорту тварини.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">
+                    05
+                </span>
+
+                <h3>
+                    Грумінг котів
+                </h3>
+
+                <p>
+                    Обережний та спокійний догляд
+                    з урахуванням характеру котика.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <span class="service-number">
+                    06
+                </span>
+
+                <h3>
+                    Експрес-догляд
+                </h3>
+
+                <p>
+                    Окремі процедури для швидкого
+                    підтримання чистоти та охайності.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="about reveal"
+    id="about"
+>
+
+    <div class="container about-grid">
+
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=85"
+                alt="Золотистий ретривер"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="section-label">
+                Про Groom Room
+            </div>
+
+            <h2 class="section-title">
+                Грумінг без зайвого стресу
+            </h2>
+
+            <p class="section-description">
+                Ми хочемо, щоб Groom Room асоціювався
+                не тільки з красивою стрижкою, а й з комфортом,
+                турботою та хорошим ставленням до кожної тварини.
+            </p>
+
+
+            <div class="advantages">
+
+                <div class="advantage">
+
+                    <span>✓</span>
+
+                    <p>
+                        Індивідуальний підхід
+                    </p>
+
+                </div>
+
+
+                <div class="advantage">
+
+                    <span>✓</span>
+
+                    <p>
+                        Професійна косметика
+                    </p>
+
+                </div>
+
+
+                <div class="advantage">
+
+                    <span>✓</span>
+
+                    <p>
+                        Дбайливе ставлення
+                    </p>
+
+                </div>
+
+
+                <div class="advantage">
+
+                    <span>✓</span>
+
+                    <p>
+                        Комфорт для вашого улюбленця
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#booking"
+                class="btn btn-primary"
+            >
+                Записатися
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section
+    class="gallery reveal"
+    id="gallery"
+>
+
+    <div class="container">
+
+        <div class="section-label">
+            Наші роботи
+        </div>
+
+        <h2 class="section-title">
+            Трохи краси<br>
+            від Groom Room
+        </h2>
+
+        <p class="section-description">
+            Наші пухнасті клієнти та результати догляду.
+        </p>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item large">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=85"
+                    alt="Двоє собак"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1200&q=85"
+                    alt="Пес після догляду"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1200&q=85"
+                    alt="Милий пес"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=1200&q=85"
+                    alt="Щасливий пес"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1200&q=85"
+                    alt="Собака після грумінгу"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DOGS ================= -->
+
+<section
+    class="dog-strip reveal"
+>
+
+    <div class="container">
+
+
+        <div class="dog-strip-heading">
+
+            <div>
+
+                <div class="section-label">
+                    Наші клієнти 🐾
+                </div>
+
+                <h2 class="section-title">
+                    Щасливі після<br>
+                    грумінгу
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Трохи пухнастого настрою перед вашим записом.
+            </p>
+
+        </div>
+
+
+        <div class="dog-strip-grid">
+
+            <img
+                src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=700&q=85"
+                alt="Собака"
+                loading="lazy"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=700&q=85"
+                alt="Золотистий ретривер"
+                loading="lazy"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=85"
+                alt="Двоє собак"
+                loading="lazy"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=85"
+                alt="Пес"
+                loading="lazy"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section
+    class="booking reveal"
+    id="booking"
+>
+
+    <div class="container booking-grid">
+
+
+        <div>
+
+            <div class="section-label">
+                Запис
+            </div>
+
+            <h2 class="section-title">
+                Запишіть свого<br>
+                улюбленця
+            </h2>
+
+            <p class="section-description">
+                Заповніть форму, і ми отримаємо інформацію
+                для зв'язку з вами.
+            </p>
+
+
+            <div class="booking-phone">
+
+                <small>
+                    Або телефонуйте:
+                </small>
+
+                <a href="tel:+380677230001">
+                    +380 67 723 00 01
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <form
+            class="booking-form"
+            onsubmit="sendBooking(event)"
+        >
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Ваше ім'я"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="+380 67 123 45 67"
+                required
+            >
+
+            <input
+                type="text"
+                id="pet"
+                placeholder="Ім'я та порода тварини"
+                required
+            >
+
+            <select
+                id="service"
+                required
+            >
+
+                <option value="">
+                    Оберіть послугу
+                </option>
+
+                <option>
+                    Комплексний грумінг
+                </option>
+
+                <option>
+                    Стрижка
+                </option>
+
+                <option>
+                    Купання
+                </option>
+
+                <option>
+                    Гігієнічний догляд
+                </option>
+
+                <option>
+                    Грумінг котів
+                </option>
+
+                <option>
+                    Експрес-догляд
+                </option>
+
+            </select>
+
+
+            <textarea
+                id="message"
+                placeholder="Бажаний день / час або додаткова інформація"
+                rows="5"
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Надіслати заявку
+            </button>
+
+
+            <div
+                id="booking-success"
+                class="booking-success"
+            >
+
+                Заявку сформовано!<br><br>
+
+                Для підтвердження запису телефонуйте:
+
+                <br><br>
+
+                <a href="tel:+380677230001">
+                    +380 67 723 00 01
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACTS ================= -->
+
+<section
+    class="contacts reveal"
+    id="contacts"
+>
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-box">
+
+            <div class="section-label">
+                Контакти
+            </div>
+
+            <h2 class="section-title">
+                Чекаємо<br>
+                на вас
+            </h2>
+
+
+            <div class="contact-list">
+
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Телефон
+                        </small>
+
+                        <a href="tel:+380677230001">
+                            +380 67 723 00 01
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Адреса
+                        </small>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=вул.+Лісна+50А,+Львів"
+                            target="_blank"
+                        >
+                            вул. Лісна, 50А<br>
+                            Львів, Львівська область
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-row">
+
+                    <div class="contact-icon">
+                        📸
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Instagram
+                        </small>
+
+                        <a
+                            href="https://www.instagram.com/groom_room_lviv/"
+                            target="_blank"
+                        >
+                            @groom_room_lviv
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <a
+                href="https://www.instagram.com/groom_room_lviv/"
+                target="_blank"
+                class="instagram-button"
+            >
+                Instagram →
+            </a>
+
+        </div>
+
+
+        <div class="map">
+
+            <iframe
+                src="https://www.google.com/maps?q=вул.%20Лісна%2050А,%20Львів,%20Україна&output=embed"
+                loading="lazy"
+                allowfullscreen
+            ></iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta reveal">
+
+    <div class="container cta-inner">
+
+        <div>
+
+            <h2>
+                Готові до нового<br>
+                образу? 🐾
+            </h2>
+
+            <p>
+                Записуйтесь у Groom Room.
+            </p>
+
+        </div>
+
+
+        <a
+            href="tel:+380677230001"
+            class="btn btn-light"
+        >
+            +380 67 723 00 01
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="footer-logo">
+
+            <img
+                src="images/logo.png"
+                alt="Groom Room"
+            >
+
+            <p>
+                © 2026 Groom Room · Львів
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#services">
+                Послуги
+            </a>
+
+            <a href="#about">
+                Про нас
+            </a>
+
+            <a href="#gallery">
+                Роботи
+            </a>
+
+            <a href="#booking">
+                Запис
+            </a>
+
+            <a href="#contacts">
+                Контакти
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu() {
+
+    document
+        .querySelector(".menu")
+        .classList.toggle("mobile-open");
+
+}
+
+
+/* ================= HEADER SCROLL ================= */
+
+window.addEventListener("scroll", function () {
+
+    const header =
+        document.querySelector(".header");
+
+    if (window.scrollY > 30) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* ================= CLOSE MOBILE MENU ================= */
+
+document
+    .querySelectorAll(".menu a")
+    .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            document
+                .querySelector(".menu")
+                .classList.remove("mobile-open");
+
+        });
+
+    });
+
+
+/* ================= REVEAL ANIMATION ================= */
+
+const observer =
+    new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target
+                        .classList
+                        .add("visible");
+
+                    observer
+                        .unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:.12
+        }
+
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(function(element) {
+
+        observer.observe(element);
+
+    });
+
+
+/* ================= BOOKING ================= */
+
+function sendBooking(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const pet =
+        document.getElementById("pet").value;
+
+    const service =
+        document.getElementById("service").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    console.log(
+`Заявка Groom Room
+
+Ім'я: ${name}
+Телефон: ${phone}
+Тварина: ${pet}
+Послуга: ${service}
+Додатково: ${message}`
+    );
+
+
+    document
+        .getElementById("booking-success")
+        .style.display = "block";
+
+
+    document
+        .getElementById("booking-success")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+}
+
+</script>
+
+</body>
+</html>
